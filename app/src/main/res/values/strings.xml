@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">SoZak</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name" translatable="false">SoZak</string>
     <integer name="com_vk_sdk_AppId">6495232</integer>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="no_auth">This application works only with VK authorization</string>
+    <string name="my_purchases">My purchases</string>
+    <string name="purchases">Purchases</string>
+    <string name="schedule">Schedule</string>
+    <string name="groups">Groups</string>
+    <string name="attachments">Attachments</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

@@ -1,16 +1,11 @@
-package com.enotniy.sozak
+package com.enotniy.sozak.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.vk.sdk.VKAccessToken
-import com.vk.sdk.VKCallback
-import com.vk.sdk.VKScope
-import com.vk.sdk.VKSdk
+import com.enotniy.sozak.R
 import com.vk.sdk.api.*
-import com.vk.sdk.api.model.VKApiCommunity
 import com.vk.sdk.api.model.VKApiCommunityArray
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,16 +15,19 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
+                pager.setCurrentItem(0, false)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
-
-                message.setText(R.string.title_dashboard)
+            R.id.navigation_groups -> {
+                pager.setCurrentItem(1, false)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
-                message.setText(R.string.title_notifications)
+            R.id.navigation_attachments -> {
+                pager.setCurrentItem(2, false)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_profile -> {
+                pager.setCurrentItem(3, false)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -41,10 +39,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
-        VKAccessToken.currentToken()?.let { _ ->
-            loadGroups()
-        } ?: VKSdk.login(this, VKScope.GROUPS)
-
+        pager.adapter = MainFragmentPagerAdapter(supportFragmentManager)
     }
 
     private fun loadGroups() {
@@ -62,17 +57,4 @@ class MainActivity : AppCompatActivity() {
                 })
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-
-        VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
-            override fun onResult(res: VKAccessToken) {
-                res.save()
-            }
-
-            override fun onError(error: VKError) {
-
-            }
-        })
-        super.onActivityResult(requestCode, resultCode, data)
-    }
 }
