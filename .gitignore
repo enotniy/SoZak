@@ -8,3 +8,6 @@
 /build
 /captures
 .externalNativeBuild
+/.idea/caches
+/app/debug.keystore
+/app/google-services.json

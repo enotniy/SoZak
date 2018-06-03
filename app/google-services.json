@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "48459808564",
+    "firebase_url": "https://sozak-864e0.firebaseio.com",
+    "project_id": "sozak-864e0",
+    "storage_bucket": "sozak-864e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48459808564:android:b865e0ec532f82e7",
+        "android_client_info": {
+          "package_name": "com.enotniy.sozak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48459808564-csvrmhvv7edeldgn7b9umaaor3ll9vv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enotniy.sozak",
+            "certificate_hash": "38211883f76418ef8b424c5fb4d7d28f7be47606"
+          }
+        },
+        {
+          "client_id": "48459808564-ca7nh6dili79u5neo5g4jgbpmho3h2an.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "48459808564-ca7nh6dili79u5neo5g4jgbpmho3h2an.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjoU9ZWx31EYOdhykr785PJtIgEHlxHDc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48459808564-ca7nh6dili79u5neo5g4jgbpmho3h2an.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
